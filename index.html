@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="customersApp">
+<head >
+    <title></title>
+    <link href="core/client/styles/core.client.styles.styles.css" rel="stylesheet" type="text/css" />
+    <link href="core/client/styles/core.client.styles.animations.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body ng-cloak>
+  <header class="navbar navbar-inner navbar-fixed-top" ng-controller="NavbarController">
+    <nav class="container">
+
+    <nav class="nav-container">
+        <ul class="nav navbar-nav nav-pills navBarPadding" menu-highlighter highlight-class-name="active">
+            <li ng-if="isAuthenticated()"><a href="#/customers">Customers</a></li>
+            <li ng-if="isAuthenticated()"><a href="#/customers">Orders</a></li>
+            <li id="nav-login" ng-click="loginOrOut()">
+                      <!-- href not used but needed to compare against path in menu-highlighter -->
+                      <a data-href="#/login">{{loginLogoutText }}</a>
+            </li>
+            <li><a href="#/register/">Register</a></li>
+        </ul>
+    </nav>
+  </nav>
+  </header>
+
+
+<div class="row">
+  <main>
+      <div ng-view class="slide-animation" ></div>
+  </main>
+</div>
+<div id="footer">
+        <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner footer">
+                <div class="container">
+                    <footer>
+                        <div class="row">
+                            <div class="col-md-12">
+                                Footer
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    <script src="core/client/scripts/angular.js"></script>
+    <script src="core/client/scripts/angular-route.js"></script>
+    <script src="core/client/scripts/angular-animate.js"></script>
+  -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.1.js"></script>
+
+
+    <script src="core/client/core.client.app.js"></script>
+    <script src="core/client/filters/core.client.filters.nameCityStateFilter.js"></script>
+    <script src="core/client/services/core.client.services.values.js"></script>
+    <script src="core/client/services/core.client.services.customersFactory.js"></script>
+    <script src="core/client/controllers/core.client.controllers.customersController.js"></script>
+    <script src="core/client/controllers/core.client.controllers.navbar.js"></script>
+
+    <script src="user/client/services/user.client.services.userService.js"></script>
+    <script src="user/client/controllers/user.client.controllers.loginController.js"></script>
+    <script src="user/client/controllers/user.client.controllers.registerController.js"></script>
+
+    <script src="core/client/controllers/core.client.controllers.ordersController.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+</body>
+</html>
