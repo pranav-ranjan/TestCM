@@ -1,0 +1,54 @@
+<div class="customers view indent" >
+        <br/><br/><br/>
+        <div class="container row">
+            <div class="col-md-11" >
+                <div class="navbar">
+
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text"
+                                       data-ng-model="searchText"
+                                       class="novalidate form-control" />
+                                       &nbsp;
+                                       <button  ng-click="search(searchText)" class="btn btn-default" style="height:26px"><span class="glyphicon glyphicon-search"></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+          <div class="gridContainer customersTable show-hide-animation">
+            <div class="col-md-10">
+              <div>
+                <table class="table table-striped">
+                  <tr>
+                  <th ng-click="doSort('name')">Name</th>
+                  <th ng-click="doSort('city')">City</th>
+                  <th ng-click="doSort('orderCount')">Order Total</th>
+                  <th>Orders</th>
+                  <th>&nbsp;</th>
+                  </tr>
+                  <tr ng-repeat="cust in filteredCustomers" class="repeat-animation">
+                  <td>{{cust.firstName + ' ' + cust.lastName}}</td>
+                  <td>{{ cust.city }}</td>
+                  <td>{{ cust.orderCount | currency }}</td>
+                  <td><a href="#/orders/{{ cust._id }}">View Orders</a></td>
+                  <td class="center"><span class="glyphicon glyphicon-remove delete" ng-click="deleteCustomer(cust.id)"></span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+<br />
+
+<div class="row show-hide-animation" data-ng-show="customers.length > 0">
+  <uib-pagination items-per-page ="pageSize" total-items="totalRecords" ng-model="currentPage" ng-change="pageChanged(currentPage)"></uib-pagination>
+   <h5>Showing {{ filteredCount }} of {{ totalRecords}} total customers</h5>
+   <br/><br/><br/>
+</div>
+
+</div>
