@@ -23,7 +23,11 @@
                 }
 
                 $location.path(path);
-            });
+            },
+            function(reason){
+              $scope.errorMessage = reason.data;
+            }
+          );
         };
     };
 

@@ -1,4 +1,41 @@
+/* CSS used here will be applied after bootstrap.css */
+.errorMessage {
+
+    padding: 5px;
+    background-color: #E03930;
+    color:white;
+
+}
 body {
+ background: url('/assets/example/bg_suburb.jpg') no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+}
+.form-group.last {
+ margin-bottom:0px;
+}
+footer {
+    margin-top:10px;
+    font-weight: bold;
+}
+tr.footer {
+    background-color: #efefef;
+}
+.navbar-inner.footer {
+    background-color: #fafafa;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height:50px;
+}
+/*body {
     overflow: hidden;
 }
 
@@ -8,9 +45,7 @@ th {
     cursor: pointer;
 }
 
-tr.footer {
-    background-color: #efefef;
-}
+
 
 main {
     margin-left: 12px;
@@ -132,22 +167,14 @@ main {
     }
 
 
-    footer {
-        margin-top:10px;
-        font-weight: bold;
-    }
+     Bootstrap overrides
 
-
-
-    /* Bootstrap overrides */
-
-    /* Added to fix Bootstrap 3 issue with Angular UI Bootstrap modal dialog*/
+    Added to fix Bootstrap 3 issue with Angular UI Bootstrap modal dialog
     .modal {
       display: block;
       overflow: hidden;
       overflow-y: hidden;
     }
-
     .pagination > .active > a,
     .pagination > .active > span,
     .pagination > .active > a:hover,
@@ -195,13 +222,7 @@ main {
         background-color: #fafafa;
     }
 
-    .navbar-inner.footer {
-        background-color: #fafafa;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-        height:50px;
-    }
+
 
     .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
         background-color: #efefef;
@@ -281,7 +302,7 @@ main {
       background-color: #f7f7f7;
     }
 
-    /* ng-cloak */
+
     [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng.ng-cloak {
         display: none;
     }
@@ -298,14 +319,7 @@ main {
       border-left: 5px solid #57A83F;
     }
 
-    .errorMessage {
-        /*position:absolute;*/
-        padding: 5px;
-        background-color: #E03930;
-        color:white;
-        /*top:0px;
-        left:270px;*/
-    }
+
 
     .editIcon {
         margin-top: 2px;
@@ -315,7 +329,7 @@ main {
         cursor: pointer;
     }
 
-    /* wcOverlay directive CSS styles */
+     wcOverlay directive CSS styles
     .overlayContainer { display: none;}
     .overlayBackground { top:0px; left:0px; padding-left:100px;position:absolute; z-index:1000;height:100%;width:100%;background-color:#808080;opacity:0.3;}
     .overlayContent { position:absolute; border: 1px solid #000; background-color:#fff; font-weight: bold;height: 100px;width: 300px;z-index:1000;text-align:center;}
@@ -345,3 +359,4 @@ main {
         }
 
     }
+*/

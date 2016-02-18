@@ -1,83 +1,49 @@
-<div class="view">
-    <div class="container">
-        <header>
-            <h3><span class="glyphicon glyphicon-lock"></span> Register</h3>
-        </header>
-        <form name="registerForm" novalidate>
-            <div class="register">
-              <div class = "row">
-                {{errorMessage}}
-              </div>
-              <div class="row">
-                  <div class="col-md-2">
-                      First Name:
-                  </div>
-                  <div class="col-md-8">
-                    <div class="col-md-5">
-                      <input type="text" name="fname" class="form-control" data-ng-model="fname" required />
-                    </div>
-                  </div>
-              </div>
-              <br />
-              <div class="row">
-                  <div class="col-md-2">
-                      Last Name:
-                  </div>
-                  <div class="col-md-8">
-                    <div class="col-md-5">
-                      <input type="text" name="lname" class="form-control" data-ng-model="lname" required />
-                    </div>
-                  </div>
-              </div>
-              <br />
-                <div class="row">
-                    <div class="col-md-2">
-                        Email:
-                    </div>
-                    <div class="col-md-8">
-                      <div class="col-md-5">
-                        <input type="email" name="email" class="form-control" data-ng-model="email" required />
-                      </div>
-                        <span class="errorMessage col-md-3" ng-show="registerForm.email.$touched && registerForm.email.$invalid">
-                            Email is required
-                        </span>
-                    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-7">
+            <div class="panel panel-default">
+                <div class="panel-heading"> <strong class="">Register</strong>
                 </div>
-                <br />
-                <div class="row">
-                    <div class="col-md-2">
-                        Password:
+
+                <div class="panel-body">
+                  <div ng-if="errorMessage">
+                    <div class="form-group">
+                        <div class="errorMessage">{{errorMessage}}</div>
+                        <div></div>
                     </div>
-                    <div class="col-md-8">
-                        <div class="col-md-5">
-                        <input type="password" name="password" class="form-control"
-                               data-ng-model="password"
-                               data-ng-minlength="6"
-                               required />
+                  </div>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" data-ng-model="fname" class="form-control" id="fname" placeholder="First Name" required="">
+                            </div>
                         </div>
-                        <span class="errorMessage col-md-3" ng-show="registerForm.password.$touched && registerForm.password.$invalid">
-                            Password is required
-                        </span>
-                    </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" data-ng-model="lname" class="form-control" id="lname" placeholder="Last Name" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="email" data-ng-model="email" class="form-control" id="email" placeholder="Email" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="password" data-ng-model="password" class="form-control" id="password" placeholder="Password" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-success btn-sm"  data-ng-click="register()">Register</button>
+                                <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <br />
-                <div class="row">
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary"
-                                data-ng-click="register()"
-                                ng-disabled="registerForm.$invalid || !registerForm.$dirty">
-                            Register
-                        </button>
-                    </div>
-                </div>
-                <br />
-                <div class="statusRow">
-                    <br />
-                    <div class="label label-important" data-ng-show="errorMessage">
-                        <span class="glyphicon glyphicon-thumbs-down icon-white"></span>&nbsp;&nbsp;Error: {{ errorMessage }}
-                    </div>
-                </div>
+
             </div>
-        </form>
+        </div>
     </div>
 </div>

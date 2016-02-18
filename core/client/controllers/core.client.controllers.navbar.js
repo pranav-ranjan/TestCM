@@ -58,7 +58,4 @@
             "but wait! A third!"
         ];
       });
-      angular.module('customersApp').controller('MainCtrl', function($scope) {
-
-        $scope.name="Pranav";
-      });
+      
