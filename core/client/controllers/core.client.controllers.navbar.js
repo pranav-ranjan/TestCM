@@ -11,6 +11,10 @@
         $scope.isAuthenticated = function(){
           return userService.user.isAuthenticated;
         }
+        $scope.register = function () {
+          $scope.navCollapsed=true;
+          redirectToRegistration();
+        }
         $scope.loginOrOut = function () {
             setLoginLogoutText();
             var isAuthenticated = userService.user.isAuthenticated;
@@ -26,6 +30,12 @@
         function redirectToLogin() {
             //var path = '/login' + $location.$$path;
             var path = '/login';
+            $location.replace();
+            $location.path(path);
+        }
+        function redirectToRegistration() {
+            //var path = '/login' + $location.$$path;
+            var path = '/register/';
             $location.replace();
             $location.path(path);
         }
@@ -58,4 +68,3 @@
             "but wait! A third!"
         ];
       });
-      

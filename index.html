@@ -54,7 +54,7 @@
    <!-- Collect the nav links, forms, and other content for toggling -->
    <div class="collapse navbar-collapse" ng-init="navCollapsed=true" ng-class="!navCollapsed && 'in'">
      <ul class="nav navbar-nav">
-       <li><a ng-click="navCollapsed=true" ng-if="!isAuthenticated()" href="#/register/" >Register</a></li>
+       <li><a  ng-if="!isAuthenticated()" ng-click="register();">Register</a></li>
 
        <li uib-dropdown="" ng-if="isAuthenticated()"><a uib-dropdown-toggle="" href="#/customers">Customers <b class="caret"></b></a>
          <ul class="dropdown-menu" role="menu">
@@ -66,7 +66,7 @@
          </ul>
        </li>
        <li uib-dropdown="" ng-if="isAuthenticated()"><a href="#/customers">Orders</a></li>
-       <li><a href="#/login" ng-click="loginOrOut()" >{{loginLogoutText }}</a></li>
+       <li><a  ng-click="loginOrOut();navCollapsed=true;" >{{loginLogoutText }}</a></li>
 
      </ul>
 
