@@ -1,5 +1,5 @@
 <div class="customers view indent" >
-        <br/><br/><br/>
+
         <div class="container row">
             <div class="col-md-11" >
                 <div class="navbar">
@@ -43,9 +43,9 @@
             </div>
           </div>
         </div>
-<br />
+<br/>
 
-<div class="row show-hide-animation" data-ng-show="customers.length > 0">
+<div class="show-hide-animation" data-ng-show="customers.length > 0">
   <uib-pagination items-per-page ="pageSize" total-items="totalRecords" ng-model="currentPage" ng-change="pageChanged(currentPage)"></uib-pagination>
    <h5>Showing {{ filteredCount }} of {{ totalRecords}} total customers</h5>
    <br/><br/><br/>

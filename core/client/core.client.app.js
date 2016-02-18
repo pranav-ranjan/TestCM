@@ -8,6 +8,10 @@
                 controller: 'CustomersController',
                 templateUrl: 'core/client/views/core.client.views.customers.html'
             })
+            .when('/customers', {
+                controller: 'CustomersController',
+                templateUrl: 'core/client/views/core.client.views.customers.html'
+            })
             .when('/orders/:customerId', {
                 controller: 'OrdersController',
                 templateUrl: 'core/client/views/core.client.views.orders.html'

@@ -49,3 +49,16 @@
         .controller('NavbarController', NavbarController);
 
       }());
+
+      angular.module('customersApp').controller('DropdownCtrl', function($scope) {
+
+        $scope.items = [
+            "The first choice!",
+            "And another choice for you.",
+            "but wait! A third!"
+        ];
+      });
+      angular.module('customersApp').controller('MainCtrl', function($scope) {
+
+        $scope.name="Pranav";
+      });
