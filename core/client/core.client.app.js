@@ -5,8 +5,12 @@
     app.config(function($routeProvider) {
         $routeProvider
             .when('/', {
-                controller: 'CustomersController',
-                templateUrl: 'core/client/views/core.client.views.customers.html'
+              controller: 'LoginController',
+              templateUrl: 'user/client/views/user.client.views.login.html'
+            })
+            .when('/home', {
+              controller: 'CustomersController',
+              templateUrl: 'core/client/views/core.client.views.customers.html'
             })
             .when('/customers', {
                 controller: 'CustomersController',

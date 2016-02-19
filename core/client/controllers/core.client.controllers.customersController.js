@@ -10,6 +10,7 @@
           $scope.filteredCount = 0;
         $scope.customers = [];
         $scope.filteredCustomers = [];
+        $scope.availableSearchParams = [];
         function  getCustomersSummary(text){
           if(text==null ||'undefined'==typeof(text)){
             text = '';

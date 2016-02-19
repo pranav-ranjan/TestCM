@@ -5,7 +5,7 @@ module.exports=function(app){
 	app.route('/api/users/register')
 	//.get( users.renderSignup)
 	.post( users.signup,function(req,res){
-		res.json({status:true,username:req.user.username,email:req.user.email});
+		res.json({status:true,username:req.user.username,email:req.user.email,sessionID:req.sessionID});
 	});
 
   app.route('/api/users/signout')
@@ -16,7 +16,7 @@ module.exports=function(app){
 	app.route('/api/users/signin')
 	//.get( users.renderSignin)
 	.post( passport.authenticate('local'),function(req,res){
-		res.json({status:true,username:req.user.username,email:req.user.email});
+		res.json({status:true,username:req.user.username,email:req.user.email,sessionID:req.sessionID});
 	});
 
 	app.get('/oauth/facebook', passport.authenticate('facebook',

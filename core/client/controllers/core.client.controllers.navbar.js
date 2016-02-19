@@ -9,7 +9,9 @@
             return $location.path().substr(0, path.length) === path;
         };
         $scope.isAuthenticated = function(){
-          return userService.user.isAuthenticated;
+          if(userService.user)
+            return userService.user.isAuthenticated;
+          return false;
         }
         $scope.register = function () {
           $scope.navCollapsed=true;
@@ -17,8 +19,8 @@
         }
         $scope.loginOrOut = function () {
             setLoginLogoutText();
-            var isAuthenticated = userService.user.isAuthenticated;
-            if (isAuthenticated) { //logout
+          
+            if ($scope.isAuthenticated()) { //logout
                 userService.logout().then(function () {
                     redirectToLogin();
                     return;
@@ -50,7 +52,9 @@
         });
 
         function setLoginLogoutText() {
-            $scope.loginLogoutText = (userService.user.isAuthenticated) ? 'Logout' : 'Login';
+            $scope.loginLogoutText =  'Login';
+            if(userService.user && userService.user.isAuthenticated)
+             $scope.loginLogoutText =  'Logout' ;
         }
 
         setLoginLogoutText();
