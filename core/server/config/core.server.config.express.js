@@ -39,6 +39,7 @@ module.exports = function() {
 	require('../routes/core.server.customerroutes.js')(app);
 	require('../../../user/server/routes/user.server.routes.js')(app);
 	//  app.use(express.static(__dirname, '/'));
+    app.use(express.static('./public'));
   app.use(express.static('./'));
 
 	// Return the Express application instance

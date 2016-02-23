@@ -3,7 +3,11 @@ crypto = require('crypto'),
 Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-firstName:String,
+firstName:
+{
+    type:String,
+    required:true
+},
 lastName:String,
 
 email:
@@ -177,7 +181,7 @@ UserSchema.post('save',
     }
     else
     {
-     console.log(' A user updated is details.');
+     console.log(' A user updated their details.');
     }
   });
 

@@ -1,9 +1,9 @@
 /*jslint node:true */
 'use strict';
 module.exports = {
-//Development configuration options
-    db: "mongodb://localhost/customermanager",
-    sessionSecret: "developmentSessionSecret",
+//Test configuration options
+    db: "mongodb://localhost/customermanager-test",
+    sessionSecret: "testSessionSecret",
     facebook: {
         clientID: 'xxx',
         clientSecret: 'yyy',

@@ -1,0 +1,13 @@
+{
+  "name": "Customer Mgr",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-route": "~1.4.9",
+    "angular-animate": "~1.4.9",
+    "angular-resource": "~1.4.9",
+    "angular-mocks": "~1.4.9",
+    "angular-bootstrap": "^1.1.2",
+    "bootstrap": "^3.3.6"
+  }
+}

@@ -13,7 +13,7 @@ module.exports = function() {
 
 	// Use Passport's 'serializeUser' method to serialize the user id
 	passport.serializeUser(function(user, done) {
-		console.log("serialize user" + user);
+		//console.log("serialize user" + user);
 		done(null, user.id);
 	});
 
