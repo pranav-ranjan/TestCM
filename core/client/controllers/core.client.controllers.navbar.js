@@ -12,11 +12,11 @@
           if(userService.user)
             return userService.user.isAuthenticated;
           return false;
-        }
+        };
         $scope.register = function () {
           $scope.navCollapsed=true;
           redirectToRegistration();
-        }
+        };
         $scope.loginOrOut = function () {
             setLoginLogoutText();
           
@@ -58,7 +58,7 @@
         }
 
         setLoginLogoutText();
-      }
+      };
       angular.module('customersApp')
         .controller('NavbarController', NavbarController);
 

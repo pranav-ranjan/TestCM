@@ -19,8 +19,8 @@ body {
  opacity: 0.9;
  margin-top:30px;
 }
-.form-group.last {
- margin-bottom:0px;
+.form-group .last {
+ margin-bottom:0;
 }
 footer {
     margin-top:10px;
@@ -29,7 +29,7 @@ footer {
 tr.footer {
     background-color: #efefef;
 }
-.navbar-inner.footer {
+.navbar-inner .footer {
     background-color: #fafafa;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;

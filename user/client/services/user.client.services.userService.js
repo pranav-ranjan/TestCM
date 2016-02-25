@@ -23,7 +23,7 @@
                     factory.user.sessionID = results.data.sessionID;
                     factory.user.userName = results.data.username;
                     changeAuth(loggedIn);
-                    $window.sessionStorage["userInfo"] = JSON.stringify(factory.user);
+                    $window.sessionStorage.userInfo = JSON.stringify(factory.user);
                     return loggedIn;
                 });
         };
@@ -36,7 +36,7 @@
                     factory.user.sessionID = results.data.sessionID;
                     factory.user.userName = results.data.username;
                     changeAuth(loggedIn);
-                    $window.sessionStorage["userInfo"] = JSON.stringify(factory.user);
+                    $window.sessionStorage.userInfo = JSON.stringify(factory.user);
                     return loggedIn;
                 });
         };
@@ -45,7 +45,7 @@
             return $http.post(serviceBase + 'signout').then(
                 function (results) {
                     var loggedIn = !results.data.status;
-                    $window.sessionStorage["userInfo"] = null;
+                    $window.sessionStorage.userInfo = null;
                     changeAuth(loggedIn);
                     return loggedIn;
                 });
@@ -55,8 +55,8 @@
             $rootScope.$broadcast('redirectToLogin', null);
         };
         function init() {
-          if ($window.sessionStorage["userInfo"] && "null" != $window.sessionStorage["userInfo"]) {
-            factory.user = JSON.parse($window.sessionStorage["userInfo"]);
+          if ($window.sessionStorage.userInfo && "null" != $window.sessionStorage.userInfo) {
+            factory.user = JSON.parse($window.sessionStorage.userInfo);
           }
         }
 
@@ -115,7 +115,7 @@
                     cookie += values + ';';
                 }
                 document.cookie = cookie;
-            }
+            };
         });
 
 

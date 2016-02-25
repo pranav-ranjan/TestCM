@@ -14,5 +14,5 @@ var passport = passport();
 
 app.listen(8080);
 
-console.log('Express listening on port 8085');
+console.log('Express listening on port 8080');
 module.exports = app;

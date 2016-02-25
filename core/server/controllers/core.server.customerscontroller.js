@@ -24,7 +24,7 @@ exports.test = function(req,res){
       res.send('ERR' + err.toString());
     });
 
-}
+};
 exports.listAll = function( req, res) {
   var topVal = req.param('pageSize'),
         skipVal = req.param('currentPage'),

@@ -1,4 +1,9 @@
 /*jslint node:true */
+/*global describe:true*/
+/*global beforeEach:true*/
+/*global it:true*/
+/*global afterEach:true*/
+
 'use strict';
 var app = require('../../../server.js'),
     should = require('should'),

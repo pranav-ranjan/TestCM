@@ -16,7 +16,7 @@
         }
         $scope.rememberMe = function() {
             if ($scope.remember) {
-                if($scope.email == null || $scope.password == null)
+                if($scope.email === null || $scope.password === null)
                 {
                   $scope.remember=false;
                   return;

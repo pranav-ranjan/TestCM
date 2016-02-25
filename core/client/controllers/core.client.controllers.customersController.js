@@ -12,7 +12,7 @@
         $scope.filteredCustomers = [];
         $scope.availableSearchParams = [];
         function  getCustomersSummary(text){
-          if(text==null ||'undefined'==typeof(text)){
+          if(text===null ||'undefined'===typeof(text)){
             text = '';
           }
 
@@ -47,7 +47,7 @@
         $scope.pageChanged=function(page){
             $scope.currentPage = page;
             getCustomersSummary($scope.searchText);
-        }
+        };
         $scope.doSort = function(propName) {
           $scope.currentPage = 1;
            $scope.sortBy = propName;
@@ -59,7 +59,7 @@
           .success(function(data){
             $scope.test = data;
           });
-        }
+        };
 
     };
 

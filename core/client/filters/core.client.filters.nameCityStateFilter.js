@@ -10,8 +10,7 @@
                 var cust = customers[i];
                 if (cust.firstName.toLowerCase().indexOf(filterValue) > -1 ||
                     cust.lastName.toLowerCase().indexOf(filterValue) > -1 ||
-                    cust.city.toLowerCase().indexOf(filterValue) > -1
-                    || cust.state.name.toLowerCase().indexOf(filterValue) > -1
+                    cust.city.toLowerCase().indexOf(filterValue) > -1 || cust.state.name.toLowerCase().indexOf(filterValue) > -1
                   ){
 
                     matches.push(cust);
