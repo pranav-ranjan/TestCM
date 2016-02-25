@@ -1,5 +1,12 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    forever: {
+        server: {
+            options: {
+                index: 'server.js'
+            }
+        }
+    },
     env: {
       dev: {
         NODE_ENV: 'development'
@@ -65,7 +72,7 @@ module.exports = function(grunt) {
     },
     concurrent: {
       dev: {
-        tasks: ['nodemon:debug', 'watch', 'node-inspector'],
+        tasks: ['node-inspector'],
         options: {
           logConcurrentOutput: true
         }
@@ -94,7 +101,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-node-inspector');
-   
+  grunt.loadNpmTasks('grunt-forever');
   
   grunt.registerTask('default', ['shell']);
   grunt.registerTask('default', ['env:dev', 'lint', 'concurrent:dev']);
